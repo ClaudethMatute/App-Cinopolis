@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Cinopolis.Models.pantalla_inicio"
-             Title="pantalla_inicio"
-    BackgroundColor="#1E0A33">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1E0A33">
     <ContentPage.Content>
         <Grid>
             <!-- Centered Title -->
@@ -11,8 +11,8 @@
                 <!-- Agregar Imagen Aquí -->
                 <Image Source="Images/logo.jpeg" WidthRequest="100" HeightRequest="100" Aspect="AspectFit"/>
 
-                <Button Text="Iniciar sesión" WidthRequest="200" HeightRequest="50" BackgroundColor="#670769" TextColor="White" FontSize="16"/>
-                <Button Text="Registro" WidthRequest="200" HeightRequest="50" BackgroundColor="#670769" TextColor="White" FontSize="16"/>
+                <Button x:Name="btnIniciarSesion" Text="Iniciar sesión" WidthRequest="200" HeightRequest="50" BackgroundColor="#670769" TextColor="White" FontSize="16" Clicked="btnIniciarSesion_Clicked"/>
+                <Button x:Name="btnRegistro" Text="Registro" WidthRequest="200" HeightRequest="50" BackgroundColor="#670769" TextColor="White" FontSize="16" Clicked="btnRegistro_Clicked"/>
             </VerticalStackLayout>
 
             <!-- Bottom navigation bar -->
@@ -26,25 +26,25 @@
 
                 <!-- Home Button -->
                 <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image Source="home.png" WidthRequest="24" HeightRequest="24"/>
+                    <Image Source="Images/home.png" WidthRequest="24" HeightRequest="24"/>
                     <Label Text="Home" TextColor="White" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
 
                 <!-- Cines Button -->
                 <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image Source="cines.png" WidthRequest="24" HeightRequest="24"/>
+                    <Image Source="Images/ubicacion.png" WidthRequest="24" HeightRequest="24"/>
                     <Label Text="Cines" TextColor="White" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
 
                 <!-- Confitería Button -->
                 <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image Source="confiteria.png" WidthRequest="24" HeightRequest="24"/>
+                    <Image Source="Images/palomitas.png" WidthRequest="24" HeightRequest="24"/>
                     <Label Text="Confitería" TextColor="White" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
 
                 <!-- Profile Button -->
                 <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image Source="profile.png" WidthRequest="24" HeightRequest="24"/>
+                    <Image Source="Images/perfil.png" WidthRequest="24" HeightRequest="24"/>
                     <Label Text="Profile" TextColor="White" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
             </Grid>

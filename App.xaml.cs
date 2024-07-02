@@ -1,4 +1,6 @@
 ﻿using App_Cinopolis.Models;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace App_Cinopolis
 {
@@ -8,14 +10,15 @@ namespace App_Cinopolis
         {
             InitializeComponent();
 
+
             //MainPage = new AppShell();
-            // MainPage = new NavigationPage(new Models.pantalla_inicio());
+            MainPage = new NavigationPage(new Models.pantalla_inicio());
             // MainPage = new NavigationPage(new Models.cinépolis_login());
 
-            //  MainPage = new NavigationPage(new Models.restabelcer_contrasena());
-           // MainPage = new NavigationPage(new Models.nueva_contrasena());
-          //  MainPage = new NavigationPage(new Models.Verificar_contrasena());
-            MainPage = new NavigationPage(new Models.pantalla_registro());
+             // MainPage = new NavigationPage(new Models.restabelcer_contrasena());
+            //MainPage = new NavigationPage(new Models.nueva_contrasena());
+            //MainPage = new NavigationPage(new Models.Verificar_contrasena());
+            //MainPage = new NavigationPage(new Models.pantalla_registro());
         }
     }
 }

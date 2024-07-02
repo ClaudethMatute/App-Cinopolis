@@ -7,4 +7,13 @@ public partial class pantalla_registro : ContentPage
 		InitializeComponent();
 	}
 
+    private void btnRegistrar_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private async void btnCancelar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new pantalla_inicio());
+    }
 }

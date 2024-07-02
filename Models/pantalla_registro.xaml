@@ -2,77 +2,111 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Cinopolis.Models.pantalla_registro"
-             Title="pantalla_registro"
+             Title=""
+             NavigationPage.HasBackButton="False"
              BackgroundColor="#2E003E">
 
-    <VerticalStackLayout Padding="20" Spacing="10">
-        <Image Source="Images/camara.png" WidthRequest="200" HeightRequest="100" Margin="0,10,0,20"/>
+    <!-- Configurar la barra de navegación -->
+    <NavigationPage.TitleView>
+        <Grid HorizontalOptions="CenterAndExpand">
+            <Label FontSize="24" Text="Registrar Usuario" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+    </NavigationPage.TitleView>
 
-        <Button 
-            Text="Tomar foto"
-            BackgroundColor="#000"
-            TextColor="White"
-            
-             Margin="0,5"
-             WidthRequest="200"
-            HorizontalOptions="Center"
-   />
-        
-        <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-            <Entry 
-                Placeholder="Ingrese su Nombre y apellidos"
-                TextColor="White"
-                PlaceholderColor="White"
-                Margin="0,5" />
-        </Frame>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
 
-        <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-            <Entry 
-                Placeholder="Ingrese su Telefono"
-                TextColor="White"
-                PlaceholderColor="White"
-                Margin="0,5"
-                Keyboard="Telephone" />
-        </Frame>
+            <Image Source="Images/camara.png" WidthRequest="200" HeightRequest="100" Margin="0,10,0,20"/>
 
-        <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-            <Entry 
-                Placeholder="Ingrese su Correo Electronico"
-                TextColor="White"
-                PlaceholderColor="White"
-                Margin="0,5"
-                Keyboard="Email" />
-        </Frame>
+            <!-- Frame con icono y entrada para Nombre -->
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="nombre.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                    <Entry Grid.Column="1" Placeholder="Ingrese su nombre" TextColor="White" PlaceholderColor="White" />
+                </Grid>
+            </Frame>
 
-        <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-            <Entry 
-                Placeholder="Contraseña"
-                IsPassword="True"
-                TextColor="White"
-                PlaceholderColor="White"
-                Margin="0,5" />
-        </Frame>
+            <!-- Frame con icono y entrada para Apellidos -->
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="nombre.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                    <Entry Grid.Column="1" Placeholder="Ingrese sus apellidos" TextColor="White" PlaceholderColor="White" />
+                </Grid>
+            </Frame>
 
-        <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-            <Entry 
-                Placeholder="Confirme contraseña"
-                IsPassword="True"
-                TextColor="White"
-                PlaceholderColor="White"
-                Margin="0,5" />
-        </Frame>
+            <!-- Frame con icono y entrada para Usuario -->
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="rusuario.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                    <Entry Grid.Column="1" Placeholder="Ingrese un usuario" TextColor="White" PlaceholderColor="White" />
+                </Grid>
+            </Frame>
 
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Margin="0,20,0,0">
-            <Button 
-                Text="Registrarse"
-                BackgroundColor="#000"
-                TextColor="White"
-                WidthRequest="120" />
-            <Button 
-                Text="Cancelar"
-                BackgroundColor="#000"
-                TextColor="White"
-                WidthRequest="120" />
-        </HorizontalStackLayout>
-    </VerticalStackLayout>
+            <!-- Frame con icono y entrada para Teléfono -->
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="telefono.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                    <Entry Grid.Column="1" Placeholder="Ingrese su teléfono" TextColor="White" PlaceholderColor="White" Keyboard="Telephone" />
+                </Grid>
+            </Frame>
+
+            <!-- Frame con icono y entrada para Correo Electrónico -->
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="correo.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                    <Entry Grid.Column="1" Placeholder="Ingrese su Correo Electrónico" TextColor="White" PlaceholderColor="White" Keyboard="Email" />
+                </Grid>
+            </Frame>
+
+            <!-- Frame con icono y entrada para Contraseña -->
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="candado.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                    <Entry Grid.Column="1" Placeholder="Contraseña" IsPassword="True" TextColor="White" PlaceholderColor="White" />
+                </Grid>
+            </Frame>
+
+            <!-- Frame con icono y entrada para Confirmar Contraseña -->
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="candado.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                    <Entry Grid.Column="1" Placeholder="Confirme contraseña" IsPassword="True" TextColor="White" PlaceholderColor="White" />
+                </Grid>
+            </Frame>
+
+            <!-- Botones para registrar y cancelar -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Margin="0,20,0,0">
+                <Button x:Name="btnRegistrar" Text="Registrarse" BackgroundColor="#670769" TextColor="White" WidthRequest="120" Clicked="btnRegistrar_Clicked"/>
+                <Button x:Name="btnCancelar" Text="Cancelar" BackgroundColor="#670769" TextColor="White" WidthRequest="120" Clicked="btnCancelar_Clicked"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

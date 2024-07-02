@@ -58,9 +58,20 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\camara.png" />
+	  <None Remove="Resources\Images\candado.png" />
+	  <None Remove="Resources\Images\clave.png" />
 	  <None Remove="Resources\Images\contrasena.png" />
+	  <None Remove="Resources\Images\correo.png" />
+	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\logo.jpeg" />
 	  <None Remove="Resources\Images\logo1.png" />
+	  <None Remove="Resources\Images\noclave.png" />
+	  <None Remove="Resources\Images\nombre.png" />
+	  <None Remove="Resources\Images\palomitas.png" />
+	  <None Remove="Resources\Images\perfil.png" />
+	  <None Remove="Resources\Images\rusuario.png" />
+	  <None Remove="Resources\Images\telefono.png" />
+	  <None Remove="Resources\Images\ubicacion.png" />
 	  <None Remove="Resources\Images\usuario.png" />
 	</ItemGroup>
 
@@ -90,5 +101,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadUnhandledDeviceExceptionAppCinopolisHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

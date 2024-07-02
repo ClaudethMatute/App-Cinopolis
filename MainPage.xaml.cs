@@ -1,4 +1,7 @@
-﻿namespace App_Cinopolis
+﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+
+namespace App_Cinopolis
 {
     public partial class MainPage : ContentPage
     {
