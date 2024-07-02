@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\camara.png" />
 	  <None Remove="Resources\Images\contrasena.png" />
 	  <None Remove="Resources\Images\logo.jpeg" />
 	  <None Remove="Resources\Images\logo1.png" />

@@ -4,6 +4,6 @@ public partial class nueva_contrasena : ContentPage
 {
 	public nueva_contrasena()
 	{
-		InitializeComponent();
+		//InitializeComponent();
 	}
 }

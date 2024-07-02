@@ -6,7 +6,7 @@
              BackgroundColor="#2E003E">
 
     <VerticalStackLayout Padding="20" Spacing="10">
-        <Image Source="Images/logo.jpeg" WidthRequest="200" HeightRequest="100" Margin="0,10,0,20"/>
+        <Image Source="Images/camara.png" WidthRequest="200" HeightRequest="100" Margin="0,10,0,20"/>
 
         <Button 
             Text="Tomar foto"
