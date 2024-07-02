@@ -14,7 +14,8 @@ namespace App_Cinopolis
 
             //  MainPage = new NavigationPage(new Models.restabelcer_contrasena());
             //MainPage = new NavigationPage(new Models.nueva_contrasena());
-            MainPage = new NavigationPage(new Models.Verificar_contrasena());
+          //  MainPage = new NavigationPage(new Models.Verificar_contrasena());
+            MainPage = new NavigationPage(new Models.pantalla_registro());
         }
     }
 }

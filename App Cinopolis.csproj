@@ -79,6 +79,9 @@
 	  <MauiXaml Update="Models\pantalla_inicio.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Models\pantalla_registro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Models\restabelcer_contrasena.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
