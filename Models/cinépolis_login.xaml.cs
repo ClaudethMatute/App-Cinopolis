@@ -6,4 +6,9 @@ public partial class cinépolis_login : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void OnForgotPasswordTapped(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new restabelcer_contrasena()); // Replace ForgotPasswordPage with your actual page name
+    }
 }
