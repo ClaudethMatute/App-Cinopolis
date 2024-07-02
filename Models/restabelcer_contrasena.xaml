@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Cinopolis.Models.restabelcer_contrasena"
+             Title="restabelcer_contrasena">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#2E003E" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300">
+
+                <Image Source="Images/logo.jpeg" WidthRequest="200" HeightRequest="100" Margin="0,0,0,20"/>
+
+                <VerticalStackLayout Margin="0,0,0,10">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Image Source="Images/seguro.png" WidthRequest="30" HeightRequest="30" Margin="0,0,10,0"/>
+                        <Label Text="Ingrese su Usuario" TextColor="White" Margin="0,0,0,5"/>
+                    </StackLayout>
+                    <Entry WidthRequest="300" HeightRequest="40" BackgroundColor="#9F75F9" TextColor="White"/>
+                </VerticalStackLayout>
+
+                
+
+                <Label Text="Se envio a su correo eletronico codigo para restablecer contraseña" TextColor="#FFf" HorizontalTextAlignment="End" Margin="20,10,20,50"/>
+
+                <Button Text="ENVIAR" WidthRequest="300" HeightRequest="50" BackgroundColor="#25132C" TextColor="White" FontSize="16"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
