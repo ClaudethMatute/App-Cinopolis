@@ -12,7 +12,7 @@
                 <Image Source="Images/logo.jpeg" WidthRequest="100" HeightRequest="100" Aspect="AspectFit"/>
 
                 <Button x:Name="btnIniciarSesion" Text="Iniciar sesión" WidthRequest="200" HeightRequest="50" BackgroundColor="#670769" TextColor="White" FontSize="16" Clicked="btnIniciarSesion_Clicked"/>
-                <Button x:Name="btnRegistro" Text="Registro" WidthRequest="200" HeightRequest="50" BackgroundColor="#670769" TextColor="White" FontSize="16" Clicked="btnRegistro_Clicked"/>
+                <Button x:Name="btnRegistro" Text="Crear Usuario" WidthRequest="200" HeightRequest="50" BackgroundColor="#670769" TextColor="White" FontSize="16" Clicked="btnRegistro_Clicked"/>
             </VerticalStackLayout>
 
             <!-- Bottom navigation bar -->
