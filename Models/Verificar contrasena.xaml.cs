@@ -4,10 +4,10 @@ public partial class Verificar_contrasena : ContentPage
 {
 	public Verificar_contrasena()
 	{
-		//InitializeComponent();
+		InitializeComponent();
 	}
-    private async void OnForgotPasswordTapped(object sender, EventArgs e)
+    private void OnForgotPasswordTapped(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Verificar_contrasena()); // Replace ForgotPasswordPage with your actual page name
+        // Lógica para reenviar el código de verificación
     }
 }

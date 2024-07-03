@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 BackgroundColor="#2E003E"
-                     x:Class="App_Cinopolis.Models.Verificar_contrasena"
-                     Title="Verificar_contrasena">
-            <ContentPage.Content>
-                <Grid BackgroundColor="#2E003E" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#2E003E"
+             x:Class="App_Cinopolis.Models.Verificar_contrasena"
+             Title="Verificar_contrasena">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300">
+                <Image Source="Images/logo.jpeg" WidthRequest="200" HeightRequest="100" Margin="0,0,0,20"/>
+                <Label TextColor="#fff" HorizontalTextAlignment="Center" Margin="0,0,0,30">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="¡Verificación del Correo Electrónico!" FontSize="20" FontAttributes="Bold"/>
+                                <Span Text=" Hemos enviado un código a tu correo electrónico, por favor ingresa el código" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
+                    <Entry Placeholder="Ingrese su Código de Verificación" TextColor="White" PlaceholderColor="White" Margin="0,5" />
+                </Frame>
+                <Button Text="Verificar Código" WidthRequest="300" HeightRequest="50" BackgroundColor="#000" TextColor="White" FontSize="16" Margin="0,20,0,5"/>
 
-                        <Image Source="Images/logo.jpeg" WidthRequest="200" HeightRequest="100" Margin="0,0,0,20"/>
-                        <Label Text="Hemos enviado un codigo a tu correco eletronico por favor ingresa el codigo" TextColor="#FF4081" HorizontalTextAlignment="End" Margin="0,10,10,30"/>
-
-                        <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-                            <Entry 
-                  Placeholder="Ingrese su Codigo de Verificacion"
-                  TextColor="White"
-                  PlaceholderColor="White"
-                  Margin="0,5" />
-                        </Frame>
-                        <Button Text="Verificar Codigo" WidthRequest="300" HeightRequest="50" BackgroundColor="#000" TextColor="White" FontSize="16" Margin="0,20,0,5"/>
-                        <StackLayout Orientation="Horizontal" Margin="10,20,10,0">
-            <Label Text="¿No has recibido el código de Verificación?" TextColor="#fff" HorizontalTextAlignment="End" Margin="0,0,10,0"/>
-    
-        </StackLayout>
-
-                        <Label Text="Reenviar codigo Verificacion" TextColor="#FF4081" HorizontalTextAlignment="End" Margin="10,12,5,20" TextDecorations="Underline">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer
-                                    Tapped="OnForgotPasswordTapped"
-                                    NumberOfTapsRequired="1" />
-                            </Label.GestureRecognizers>
-                        </Label>
-
-                    </VerticalStackLayout>
-                </Grid>
-            </ContentPage.Content>
-        </ContentPage>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10,20,10,0">
+                    <Label Text="¿No has recibido el código de Verificación?" TextColor="#fff" Margin="0,0,10,0"/>
+                    <Label Text="Reenviar código de Verificación" TextColor="#FF4081" TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnForgotPasswordTapped"
+                                NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
