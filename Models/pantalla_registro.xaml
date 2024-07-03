@@ -74,31 +74,77 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Image Source="correo.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                    <Entry Grid.Column="1" Placeholder="Ingrese su Correo Electrónico" TextColor="White" PlaceholderColor="White" Keyboard="Email" />
+                    <Entry Grid.Column="1" Placeholder="Ingrese su correo electrónico" TextColor="White" PlaceholderColor="White" Keyboard="Email" />
                 </Grid>
             </Frame>
 
             <!-- Frame con icono y entrada para Contraseña -->
-            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="2">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Image Source="candado.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                    <Entry Grid.Column="1" Placeholder="Contraseña" IsPassword="True" TextColor="White" PlaceholderColor="White" />
+
+                    <Image x:Name="PasswordIconp"
+                        Source="candado.png"
+                        WidthRequest="24" HeightRequest="24"
+                        VerticalOptions="Center"
+                        Margin="5"/>
+                    <Entry Grid.Column="1"
+                         x:Name="PasswordEntryp"
+                         Placeholder="Contraseña"
+                         IsPassword="True"
+                         TextColor="White"
+                         PlaceholderColor="White"
+                         Margin="10,0,0,0" />
+                    <ImageButton x:Name="TogglePasswordVisibilityIconp"
+                         Grid.Column="2"
+                         BackgroundColor="Transparent"
+                         Clicked="TogglePasswordVisibilityIconp_Clicked"
+                         VerticalOptions="Center"
+                         WidthRequest="24" HeightRequest="24"
+                         Margin="0">
+                        <ImageButton.Source>
+                            <FileImageSource File="noclave.png" />
+                        </ImageButton.Source>
+                    </ImageButton>
                 </Grid>
             </Frame>
 
             <!-- Frame con icono y entrada para Confirmar Contraseña -->
-            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="5">
+            <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="2">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Image Source="candado.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                    <Entry Grid.Column="1" Placeholder="Confirme contraseña" IsPassword="True" TextColor="White" PlaceholderColor="White" />
+
+                    <Image x:Name="PasswordIcon"
+                         Source="candado.png"
+                         WidthRequest="24" HeightRequest="24"
+                         VerticalOptions="Center"
+                         Margin="5"/>
+                    <Entry Grid.Column="1"
+                         x:Name="PasswordEntry"
+                         Placeholder="Confirmar contraseña"
+                         IsPassword="True"
+                         TextColor="White"
+                         PlaceholderColor="White"
+                         Margin="10,0,0,0" />
+                        <ImageButton x:Name="TogglePasswordVisibilityIcon"
+                         Grid.Column="2"
+                         BackgroundColor="Transparent"
+                         Clicked="TogglePasswordVisibility"
+                         VerticalOptions="Center"
+                         WidthRequest="24" HeightRequest="24"
+                         Margin="0">
+                        <ImageButton.Source>
+                            <FileImageSource File="noclave.png" />
+                        </ImageButton.Source>
+                    </ImageButton>
                 </Grid>
             </Frame>
 

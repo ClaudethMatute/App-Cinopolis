@@ -2,39 +2,131 @@
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="App_Cinopolis.Models.nueva_contrasena"
-                 Title="nueva_contrasena">
-        <ContentPage.Content>
+                 BackgroundColor="#2E003E"
+                 NavigationPage.HasBackButton="False"
+                 Title="">
+
+    <!-- Configurar la barra de navegación -->
+    <NavigationPage.TitleView>
+        <Grid HorizontalOptions="CenterAndExpand">
+            <Label FontSize="24" Text="Nueva Contraseña" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+    </NavigationPage.TitleView>
+        
+    <ContentPage.Content>
             <Grid BackgroundColor="#2E003E" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300">
 
                     <Image Source="Images/logo.jpeg" WidthRequest="200" HeightRequest="100" Margin="0,0,0,20"/>
 
-                    <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-                        <Entry 
-                        Placeholder="Ingrese su Contraseña Temporar"
-                     TextColor="White"
-                      PlaceholderColor="White"
-                     Margin="0,5" />
-                    </Frame>
-                    <BoxView HeightRequest="20" BackgroundColor="Transparent" />
-                    <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-                        <Entry 
-                         Placeholder="Ingrese su Nueva Contraseña"
-                     TextColor="White"
-                        PlaceholderColor="White"
-                      Margin="0,5" />
-                    </Frame>
-                    <BoxView HeightRequest="20" BackgroundColor="Transparent" />
-                    <Frame BackgroundColor="#9F75F9" CornerRadius="8" HasShadow="False" Padding="0">
-                        <Entry 
-                        Placeholder="Verificar Contraseña"
-                        TextColor="White"
-                        PlaceholderColor="White"
-                    Margin="0,5" />
-                    </Frame>
+                <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image x:Name="PasswordIconT"
+                            Source="candado.png"
+                            WidthRequest="24" HeightRequest="24"
+                            VerticalOptions="Center"
+                            Margin="2"/>
+                        <Entry Grid.Column="1"
+                                 x:Name="PasswordEntryT"
+                                 Placeholder="Ingrese su contraseña temporal"
+                                 IsPassword="True"
+                                 TextColor="White"
+                                 PlaceholderColor="White"
+                                 Margin="5,0,0,0" />
+                        <ImageButton x:Name="TogglePasswordVisibilityIconT"
+                             Grid.Column="2"
+                             BackgroundColor="Transparent"
+                             Clicked="TogglePasswordVisibilityIconT_Clicked"
+                             VerticalOptions="Center"
+                             WidthRequest="24" HeightRequest="24"
+                             Margin="0">
+                            <ImageButton.Source>
+                                <FileImageSource File="noclave.png" />
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </Grid>
+                </Frame>
 
 
-                    <Button Text="Restablecer Contraseña" WidthRequest="300" HeightRequest="50" BackgroundColor="#000000" TextColor="White" FontSize="16" Margin="0,50,0,20"/>
+                <BoxView HeightRequest="20" BackgroundColor="Transparent" />
+                <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image x:Name="PasswordIconNC"
+                            Source="candado.png"
+                            WidthRequest="24" HeightRequest="24"
+                            VerticalOptions="Center"
+                            Margin="2"/>
+                           <Entry Grid.Column="1"
+                                 x:Name="PasswordEntryNC"
+                                 Placeholder="Ingrese su nueva contraseña"
+                                 IsPassword="True"
+                                 TextColor="White"
+                                 PlaceholderColor="White"
+                                 Margin="5,0,0,0" />
+                        <ImageButton x:Name="TogglePasswordVisibilityIconNC"
+                                 Grid.Column="2"
+                                 BackgroundColor="Transparent"
+                                 Clicked="TogglePasswordVisibilityIconNC_Clicked"
+                                 VerticalOptions="Center"
+                                 WidthRequest="24" HeightRequest="24"
+                                 Margin="0">        
+                            <ImageButton.Source>
+                                <FileImageSource File="noclave.png" />
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </Grid>
+                </Frame>
+
+
+                <BoxView HeightRequest="20" BackgroundColor="Transparent" />
+                <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image x:Name="PasswordIconVC"
+                            Source="candado.png"
+                            WidthRequest="24" HeightRequest="24"
+                            VerticalOptions="Center"
+                            Margin="2"/>
+                           <Entry Grid.Column="1"
+                                 x:Name="PasswordEntryVC"
+                                 Placeholder="Verificar contraseña"
+                                 IsPassword="True"
+                                 TextColor="White"
+                                 PlaceholderColor="White"
+                                 Margin="5,0,0,0" />
+                        <ImageButton x:Name="TogglePasswordVisibilityIconVC"
+                                     Grid.Column="2"
+                                     BackgroundColor="Transparent"
+                                     Clicked="TogglePasswordVisibilityIconVC_Clicked"
+                                     VerticalOptions="Center"
+                                     WidthRequest="24" HeightRequest="24"
+                                     Margin="0">
+                            <ImageButton.Source>
+                                <FileImageSource File="noclave.png" />
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </Grid>
+                </Frame>
+
+
+                <Button x:Name="btnRestablecer" Text="Restablecer Contraseña" WidthRequest="300" HeightRequest="50" BackgroundColor="#000000" TextColor="White" FontSize="16" Margin="0,50,0,20" Clicked="btnRestablecer_Clicked"/>
                 </VerticalStackLayout>
             </Grid>
         </ContentPage.Content>

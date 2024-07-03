@@ -10,4 +10,9 @@ public partial class Verificar_contrasena : ContentPage
     {
         // Lógica para reenviar el código de verificación
     }
+
+    private async void btnVerificar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new nueva_contrasena());
+    }
 }

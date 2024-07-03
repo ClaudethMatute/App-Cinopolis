@@ -9,19 +9,29 @@
 
                 <Image Source="Images/logo.jpeg" WidthRequest="200" HeightRequest="100" Margin="0,0,0,20"/>
 
-         
 
-                <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="0">
-                    <Entry 
-          Placeholder="Ingrese codigo de Verificacion"
-          TextColor="White"
-          PlaceholderColor="White"
-          Margin="0,5" />
+
+                <Frame BackgroundColor="#9F75F9" CornerRadius="0" HasShadow="False" Padding="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="usuario.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+                        <Entry Grid.Column="1"
+               Placeholder="Ingrese su usuario"
+               TextColor="White"
+               PlaceholderColor="White"
+               Margin="10,0,0,0" />
+                    </Grid>
                 </Frame>
 
-                <Label Text="Se envió a su correo electrónico, con un código para restablecer la contraseña, por favor introduzca el Código!" TextColor="#FFf" HorizontalTextAlignment="Start" Margin="0,10,0,50"/>
+                <Label Text="Por favor, introduce tu nombre de usuario en el campo a continuación para comenzar el proceso de restablecimiento de tu contraseña. Una vez que ingreses tu usuario y hagas clic en el botón de envío, te enviaremos un código de verificación a la dirección de correo electrónico asociada con tu cuenta."
+                       TextColor="#FFf" HorizontalTextAlignment="Center"
+                       Margin="0,10,0,50" />
 
-                <Button Text="ENVIAR" WidthRequest="300" HeightRequest="50" BackgroundColor="#000" TextColor="White" FontSize="16"/>
+                <Button x:Name="btnEnviar" Text="ENVIAR" WidthRequest="300" HeightRequest="50" BackgroundColor="#000" TextColor="White" FontSize="16" Clicked="btnEnviar_Clicked"/>
             </VerticalStackLayout>
         </Grid>
     </ContentPage.Content>

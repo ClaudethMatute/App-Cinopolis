@@ -69,6 +69,7 @@
 	  <None Remove="Resources\Images\nombre.png" />
 	  <None Remove="Resources\Images\palomitas.png" />
 	  <None Remove="Resources\Images\perfil.png" />
+	  <None Remove="Resources\Images\reloj.png" />
 	  <None Remove="Resources\Images\rusuario.png" />
 	  <None Remove="Resources\Images\telefono.png" />
 	  <None Remove="Resources\Images\ubicacion.png" />
